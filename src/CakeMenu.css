@@ -1,0 +1,259 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background: #f8f3ef;
+  color: #4a403a;
+}
+
+button {
+  font: inherit;
+}
+
+.cake-menu-page {
+  min-height: 100vh;
+  background: #f8f3ef;
+  padding: 18px 14px 50px;
+}
+
+.cake-menu-hero {
+  max-width: 1200px;
+  margin: 0 auto 28px;
+  text-align: center;
+  padding: 24px 0 6px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.logo-image {
+  width: 300px;
+  max-width: 80%;
+  display: block;
+  margin: 0 auto;
+  background: transparent;
+}
+
+.hero-subtext {
+  margin: 8px 0 0;
+  font-size: 14px;
+  color: #9a8177;
+  letter-spacing: 2px;
+}
+
+.cake-category-section {
+  max-width: 1200px;
+  margin: 0 auto 34px;
+}
+
+.category-title {
+  margin: 0 0 18px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: #6f564d;
+  letter-spacing: 1px;
+}
+
+.cake-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.cake-card {
+  border: none;
+  width: 100%;
+  background: #fcfbfa;
+  border-radius: 22px;
+  overflow: hidden;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+  box-shadow: 0 6px 18px rgba(126, 101, 92, 0.08);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.cake-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(126, 101, 92, 0.12);
+}
+
+.cake-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  background: #efe7e2;
+}
+
+.cake-info {
+  padding: 14px 14px 16px;
+  text-align: center;
+}
+
+.cake-code {
+  margin: 0 0 6px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #6d554c;
+}
+
+.cake-size {
+  margin: 0 0 6px;
+  font-size: 13px;
+  color: #9a8379;
+  line-height: 1.4;
+}
+
+.cake-price {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #bf7f78;
+}
+
+.cake-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(70, 50, 46, 0.58);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  z-index: 1000;
+}
+
+.cake-modal {
+  width: min(900px, 100%);
+  background: #fffdfb;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #6d554c;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.cake-modal-image {
+  width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+  display: block;
+  background: #f8f1ed;
+}
+
+.cake-modal-info {
+  padding: 18px 20px 24px;
+  text-align: center;
+}
+
+.cake-modal-code {
+  margin: 0 0 8px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #6d554c;
+}
+
+.cake-modal-size {
+  margin: 0 0 8px;
+  font-size: 14px;
+  color: #9a8379;
+}
+
+.cake-modal-price {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #bf7f78;
+}
+
+@media (max-width: 900px) {
+  .cake-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cake-menu-page {
+    padding: 14px 10px 36px;
+  }
+
+  .logo-image {
+    width: 180px;
+  }
+
+  .cake-menu-hero {
+    padding: 18px 0 2px;
+    margin-bottom: 20px;
+  }
+
+  .hero-subtext {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+  }
+
+  .category-title {
+    font-size: 20px;
+    margin-bottom: 14px;
+  }
+
+  .cake-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .cake-card {
+    border-radius: 18px;
+  }
+
+  .cake-info {
+    padding: 12px;
+  }
+
+  .cake-code {
+    font-size: 14px;
+  }
+
+  .cake-size,
+  .cake-price {
+    font-size: 12px;
+  }
+
+  .cake-modal {
+    border-radius: 18px;
+  }
+
+  .close-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 24px;
+  }
+}
+
+@media (hover: none) {
+  .cake-card:hover {
+    transform: none;
+    box-shadow: 0 6px 18px rgba(126, 101, 92, 0.08);
+  }
+}
